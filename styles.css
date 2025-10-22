@@ -102,6 +102,16 @@ body {
     font-weight: 700;
 }
 
+/* Make the section heading centered and use the same gradient style as the main title */
+.upcoming-title {
+    text-align: center;
+    font-size: 1.125rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* Removed old list/card fallbacks in favor of Bootstrap cards */
 
 /* event-info and simple list helpers removed (we use Bootstrap card markup) */
