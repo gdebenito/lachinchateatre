@@ -79,5 +79,29 @@ function handleSwipe() {
     }
 }
 
-// Animación de entrada para los enlaces
-// No JS animation for .link-button — visual hover handled by CSS
+// Event button date validation
+function checkEventDate() {
+    const eventButton = document.getElementById('eventButton');
+    if (!eventButton) return;
+
+    const eventDateStr = eventButton.getAttribute('data-event-date');
+    if (!eventDateStr) return;
+
+    const eventDate = new Date(eventDateStr + 'T23:59:59');
+    const currentDate = new Date();
+
+    if (currentDate > eventDate) {
+        eventButton.disabled = true;
+        eventButton.textContent = 'Esdeveniment finalitzat';
+        eventButton.classList.remove('btn-primary');
+        eventButton.classList.add('btn-secondary');
+        eventButton.style.pointerEvents = 'none';
+    }
+}
+
+// Run date check when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkEventDate);
+} else {
+    checkEventDate();
+}

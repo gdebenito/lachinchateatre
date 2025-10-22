@@ -91,25 +91,83 @@ body {
 
 /* Upcoming events section */
 .upcoming {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.upcoming-title {
-    font-size: 1.125rem;
-    color: #2d3748;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-/* Make the section heading centered and use the same gradient style as the main title */
-.upcoming-title {
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 1.125rem;
+}
+
+.upcoming-title {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-weight: 700;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Event card styling */
+.event-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15) !important;
+}
+
+.event-card .card-img-top {
+    height: 280px;
+    object-fit: cover;
+}
+
+.event-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.event-datetime-text {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.event-description {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 12px 32px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.event-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.event-btn:disabled {
+    background: #cbd5e0;
+    color: #718096;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 /* Removed old list/card fallbacks in favor of Bootstrap cards */

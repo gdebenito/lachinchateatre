@@ -19,7 +19,7 @@
             <p class="description">Som una companyia de teatre jove emergent i autogestionada. De Sant Andreu de Palomar.</p>
         </div>
 
-        <!-- Carrusel de Imágenes -->
+        <!-- Carrusel de Imágenes
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-slide active">
@@ -31,27 +31,34 @@
             <div class="carousel-dots">
                 <span class="dot active" onclick="currentSlide(0)"></span>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- Properes funcions (Bootstrap cards) -->
         <section class="upcoming">
             <h2 class="upcoming-title">Properes funcions</h2>
-            <div class="row g-3">
-                <div class="col-12">
-                    <a href="https://santandreu.inscripcionscc.com/MiramModular/buscador/buscador.jsp?g=1&c=22&a=1477" class="card upcoming-card text-decoration-none text-reset d-block" aria-label="La nit dels fars - veure entrades">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start gap-3">
-                             <div class="event-date-badge">
-                                 <div class="event-datetime">7 Nov 18:30</div>
-                             </div>
-                                <div>
-                                    <h5 class="card-title mb-1">Dues Famílies</h5>
-                                    <p class="card-text text-muted mb-0">Centre Cívic Sant Andreu</p>
-                                </div>
-                            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="card event-card shadow-sm">
+                        <img src="assets/image1.jpg" class="card-img-top" alt="Dues Famílies">
+                        <div class="card-body text-center">
+                            <h5 class="card-title event-title">Dues Famílies</h5>
+                            <p class="event-datetime-text mb-2">
+                                <strong>7 de novembre, 2025</strong> · 18:00h<br>
+                                📍 Centre Cívic Sant Andreu
+                            </p>
+                            <p class="card-text event-description">
+                                Una història sobre l'acolliment familiar. Dues vides diferents. Una trobada necessària.
+                            </p>
+                            <a href="https://santandreu.inscripcionscc.com/MiramModular/buscador/buscador.jsp?g=1&c=22&a=1477" 
+                               class="btn btn-primary event-btn" 
+                               id="eventButton"
+                               data-event-date="2025-11-07"
+                               aria-label="Agafar entrades per Dues Famílies">
+                                Agafar entrades
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
