@@ -121,7 +121,11 @@ body {
 
 .event-card .card-img-top {
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #f7fafc;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .event-title {
