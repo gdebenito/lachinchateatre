@@ -40,6 +40,37 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
                     <div class="card event-card shadow-sm">
+                        <img src="assets/image2.jpeg" alt="Dues Famílies">
+                        <div class="card-body text-center">
+                            <h5 class="card-title event-title">Dues Famílies</h5>
+                            <p class="event-datetime-text mb-2">
+                                <strong>17 d'Abril, 2026</strong> · 18:30h<br>
+                                📍 Centre Cívic Maria Aurèlia Capmany <br>
+                                (Av. d' Àngel Sallent, 55, 08224 Terrassa)
+                            </p>
+                            <p class="card-text event-description">
+                                Una història sobre l'acolliment familiar. Dues vides diferents. Una trobada necessària.
+                            </p>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSczuOJmjmTmpPkRl7cn_1GrqFF0NCPETOhDjgr7dS1ZjClHDA/viewform" 
+                               class="btn btn-secondary event-btn" 
+                               id="eventButton"
+                               data-event-date="2026-04-17"
+                               aria-label="Inscripcions per Dues Famílies">
+                                Inscriu-te!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="upcoming">
+            <h2 class="upcoming-title" style="cursor:pointer;" onclick="toggleFinalitzades()">
+                Altres funcions
+                <span id="toggleIcon" style="font-size:0.7em; margin-left:8px;">&#9654;</span>
+            </h2>
+            <div class="row justify-content-center" id="finalitzadesContent" style="display:none;">
+                <div class="col-12 col-md-8">
+                    <div class="card event-card shadow-sm">
                         <img src="assets/image1.jpg" alt="Dues Famílies">
                         <div class="card-body text-center">
                             <h5 class="card-title event-title">Dues Famílies</h5>
@@ -91,5 +122,18 @@
         </footer>
     </div>
     <script src="script.js"></script>
+    <script>
+        function toggleFinalitzades() {
+            const content = document.getElementById('finalitzadesContent');
+            const icon = document.getElementById('toggleIcon');
+            if (content.style.display === 'none') {
+                content.style.display = '';
+                icon.innerHTML = '&#9660;';
+            } else {
+                content.style.display = 'none';
+                icon.innerHTML = '&#9654;';
+            }
+        }
+    </script>
 </body>
 </html>
